@@ -30,10 +30,12 @@ RegisterCommand('hygienes', function()
     if myHygienes then
         for k,v in pairs(myHygienes) do
             if v.hasThis  then
-                if v.canFade then
-                    hygienes[#hygienes+1] = {label = k, icon = 'star-of-life', description = 'Time till gone.', progress=math.floor(convertToPercentage(v.canFade.iterations, Config.HygieneStatus[k].canFade.iterations)), colorScheme='DarkSlateGrey', iconAnimation='beat', close=false}
-                else
-                    hygienes[#hygienes+1] = {label = k, description =k, icon = 'star-of-life',  progress=100, colorScheme='DarkSlateGrey',  close=false}
+                if k ~= 'Poop' and k ~= 'Pee' then
+                    if v.canFade then
+                        hygienes[#hygienes+1] = {label = k, icon = 'star-of-life', description = 'Time till gone.', progress=math.floor(convertToPercentage(v.canFade.iterations, Config.HygieneStatus[k].canFade.iterations)), colorScheme='DarkSlateGrey', iconAnimation='beat', close=false}
+                    else
+                        hygienes[#hygienes+1] = {label = k, description =k, icon = 'star-of-life',  progress=100, colorScheme='DarkSlateGrey',  close=false}
+                    end
                 end
             end
         end
