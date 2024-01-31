@@ -17,7 +17,7 @@ function convertToPercentage(number, maxNumber)
     elseif number > maxNumber then
         number = maxNumber
     end
-    local percentage = ((number / maxNumber) * 100) -- Flipping the percentage
+    local percentage = ((number / maxNumber) * 100) 
     return percentage
 end
 
