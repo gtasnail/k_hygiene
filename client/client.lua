@@ -1,5 +1,5 @@
 
-if (GetResourceState('ox_lib') and GetResourceState('k_hygiene-dev')) ~= 'started' then
+if (GetResourceState('ox_lib') and GetResourceState('k_hygiene')) ~= 'started' then
     print('^1 Please make sure to install ox_lib and k_disease and make sure they are both started.')
     return
 end
