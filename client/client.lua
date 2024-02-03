@@ -22,7 +22,7 @@ function convertToPercentage(number, maxNumber)
 end
 
 RegisterCommand('hygienes', function()
-    local myHygienes = exports['k_hygiene-dev']:GetHygiene()
+    local myHygienes = exports['k_hygiene']:GetHygiene()
     hygienes = {
         {label = "Pee", icon = 'tint', description='Time until you piss.',  progress=100 - math.floor(convertToPercentage(myHygienes['Pee'].iterationsUntil, Config.HygieneStatus['Pee'].iterationsUntil)), colorScheme='gold', iconColor='gold', iconAnimation='beat', close=false},
         {label = "Poop", icon = 'poop', description='Time until you poop.',  progress=100 - math.floor(convertToPercentage(myHygienes['Poop'].iterationsUntil, Config.HygieneStatus['Poop'].iterationsUntil)), colorScheme='SaddleBrown', iconColor='SaddleBrown', iconAnimation='beat', close=false}
